@@ -1,0 +1,16 @@
+FUNCTION insertion_sort(ARRAY[n]) : INTEGER
+VAR
+tmp : INTEGER
+i,j;:INTEGER;
+BEGIN
+    FOR i FROM 0 TO n.length-1 STEP +1  DO
+        tmp = ARRAY[i];
+        j = i-1;
+        WHILE (j >= 0 && ARRAY[j] > tmp) DO
+            ARRAY[j+1] = ARRAY[j];
+             j--;
+        END_WHILE
+        ARRAY[j+1] = tmp;
+    END_FOR
+    WRITE ARRAY;
+END
